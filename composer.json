@@ -1,21 +1,22 @@
 {
 	"name": "avram/composer-caffeinated-module-installer",
 	"description": "Extend the composer/installers plugin to accept caffeinated modules.",
-	"homepage": "http://www.oomphinc.com/",
 	"type": "composer-plugin",
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "Stephen Beemsterboer",
-			"email": "stephen@oomphinc.com",
-			"homepage": "https://github.com/balbuf"
+			"name": "Nemanja Avramović",
+			"email": "avramyu@gmail.com",
+			"homepage": "https://github.com/avramovic"
 		}
 	],
 	"support": {
 		"issues": "https://github.com/avramovic/composer-caffeinated-module-installer/issues"
 	},
 	"autoload": {
-		"psr-4": {"Avram\\ComposerCaffeinateedModuleInstaller\\": "src/"}
+		"psr-4": {
+			"Avram\\ComposerCaffeinateedModuleInstaller\\": "src/"
+		}
 	},
 	"extra": {
 		"class": "Avram\\ComposerCaffeinateedModuleInstaller\\Plugin"
