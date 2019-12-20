@@ -1,8 +1,8 @@
-# Composer Installers Extender
+# Composer Caffeinated Module Installer
 
-The `composer-installers-extender` is a plugin for [Composer](https://getcomposer.org/) that allows
-any package to be installed to a directory other than the default `vendor/` directory within
-the repo on a package-by-package basis. This plugin extends the [`composer/installers`](https://github.com/composer/installers)
+The `composer-caffeinated-module-installer` is a plugin for [Composer](https://getcomposer.org/) that allows
+caffeinated/modules module to be installed to a directory other than the default `vendor/` directory within
+the repo on a package type basis. This plugin extends the [`composer/installers`](https://github.com/composer/installers)
 plugin to allow any arbitrary package type to be handled by their custom installer and specified explicitly in the
 `"installer-paths"` mapping in the `"extra"` data property.
 
@@ -12,26 +12,25 @@ allows additional package types to be handled by `composer/installers`, benefiti
 mapping and token replacement of package properties.
 
 ## How to Use
-Add `oomphinc/composer-installers-extender` as a dependency of your project.
+Add `avram/composer-caffeinated-module-installer` as a dependency of your project.
 ```sh
-composer require oomphinc/composer-installers-extender
+composer require avram/composer-caffeinated-module-installer
 ```
 `composer/installers` is a dependency of this plugin and will be automatically required as well.
 
 To support additional package types, add an array of these types in the `"extra"` property in your `composer.json`:
 ```
 	"extra": {
-		"installer-types": ["library"]
+		"installer-types": ["module"]
 	}
 ```
 Then, you can add mappings for packages of these types in the same way that you would add package types
 that are supported by [`composer/installers`](https://github.com/composer/installers#custom-install-paths):
 ```
   "extra": {
-    "installer-types": ["library"],
+    "installer-types": ["module"],
     "installer-paths": {
-      "special/package/": ["my/package"],
-      "path/to/libraries/{$name}/": ["type:library"]
+      "app/Modules/{$name}/": ["type:module"]
     }
   }
 ```
