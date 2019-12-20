@@ -35,7 +35,7 @@ that are supported by [`composer/installers`](https://github.com/composer/instal
   }
 ```
 By default, packages that do not specify a `type` will be considered type `library`. Adding support for this type
-allows any of these packages to be placed in a different install path.
+allows any of these packages to be placed in a different install path. In other words, your modules should have type `module`.
 
 If a type has been added to `"installer-types"`, the plugin will attempt to find an explicit installer path in the mapping.
 If there is no match either by name or by type, the default installer path for all packages will be used instead.
