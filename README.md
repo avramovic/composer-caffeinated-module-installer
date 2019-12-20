@@ -38,7 +38,7 @@ By default, packages that do not specify a `type` will be considered type `libra
 allows any of these packages to be placed in a different install path. In other words, your modules should have type `module`.
 
 If a type has been added to `"installer-types"`, the plugin will attempt to find an explicit installer path in the mapping.
-If there is no match either by name or by type, the default installer path for all packages will be used instead.
+If there is no match either by name or by type, the default installer path for all packages will be used instead. This package will call ucwords on name after replacing all underscores and dashes with space (and then remove the space), so for `your-awesome-package` the folder will be `your/install/path/YourAwesomePackage`, because caffeinated/modules like studly case :)
 
 Please see the README for [`composer/installers`](https://github.com/composer/installers) to see the supported
 syntax for package and type matching as well as the supported replacement tokens in the path (e.g. `{$name}`).
